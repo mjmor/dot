@@ -95,13 +95,14 @@ set $ws1 "1: &#xf120;"
 set $ws2 "2: &#xf001;"
 set $ws3 "3: &#xf1d7;"
 set $ws4 "4: &#xf268;"
+set $ws5 "5: &#xf1c2;"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
 bindsym $mod+2 workspace $ws2
 bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
-bindsym $mod+5 workspace 5
+bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace 6
 bindsym $mod+7 workspace 7
 bindsym $mod+8 workspace 8
@@ -113,7 +114,7 @@ bindsym $mod+Shift+1 move container to workspace $ws1
 bindsym $mod+Shift+2 move container to workspace $ws2
 bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4
-bindsym $mod+Shift+5 move container to workspace 5
+bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace 6
 bindsym $mod+Shift+7 move container to workspace 7
 bindsym $mod+Shift+8 move container to workspace 8
@@ -122,6 +123,7 @@ bindsym $mod+Shift+0 move container to workspace 10
 
 # specific desktops for application classes
 assign [class="google-chrome"] $ws4
+assign [class="libreoffice-*"] $ws5
 # special case for spotify because it doesn't set window hints
 for_window [class="Spotify"] move to workspace $ws2
 
