@@ -60,8 +60,8 @@ disk "/home" {
 }
 
 volume master {
-        format = "♪ %volume"
-        format_muted = "♪ muted (%volume)"
+        format = " %volume"
+        format_muted = " (%volume)"
         device = "default"
         mixer = "Master"
         mixer_idx = 0
