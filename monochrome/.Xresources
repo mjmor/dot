@@ -1,19 +1,4 @@
-XTerm*termName: xterm-256color
-XTerm*locale: true
-XTerm*metaSendsEscape: true
-
-! Use a nice truetype font and size by default... 
-XTerm*faceName: DejaVu Sans Mono Bold:size=10:antialias=true
-
-! Every shell is a login shell by default (for inclusion of all necessary environment variables)
-XTerm*loginshell: true
-
-! I like a LOT of scrollback...
-XTerm*savelines: 16384
-
-! double-click to select whole URLs :D
-XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
-
+!!! Theme color config !!!
 ! foggy pine trees theme
 *background: rgb:1a/1a/1a
 *foreground: rgb:d6/d6/d6
@@ -34,5 +19,71 @@ XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 *color14:    rgb:96/cc/cc
 *color15:    rgb:ff/ff/ff
 
+!!! XTerm Config !!!
+XTerm*termName: xterm-256color
+XTerm*locale: true
+XTerm*metaSendsEscape: true
+
+! Use a nice truetype font and size by default... 
+XTerm*faceName: DejaVu Sans Mono Bold:size=9:antialias=true
+
+! Every shell is a login shell by default (for inclusion of all necessary environment variables)
+XTerm*loginshell: true
+
+! I like a LOT of scrollback...
+XTerm*savelines: 16384
+
+! double-click to select whole URLs :D
+XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
+
+
 ! stop output to terminal from jumping down to bottom of scroll again
 XTerm*scrollTtyOutput: false
+
+!!! Font Settings !!!
+Xft.autohint: 0
+Xft.lcdfilter: lcddefault
+Xft.hintstyle: hintslight
+Xft.hinting: 1
+Xft.antialias: 1
+Xft.rgba: rgb
+
+!!!! XScreenSaver settings !!!!
+! font settings
+xscreensaver.Dialog.headingFont:        -*-dejavu sans mono-bold-r-*-*-14-*-*-*-*-*-*-*
+xscreensaver.Dialog.bodyFont:           -*-dejavu sans mono-medium-r-*-*-14-*-*-*-*-*-*-*
+xscreensaver.Dialog.labelFont:          -*-dejavu sans mono-medium-r-*-*-14-*-*-*-*-*-*-*
+xscreensaver.Dialog.unameFont:          -*-dejavu sans mono-medium-r-*-*-14-*-*-*-*-*-*-*
+xscreensaver.Dialog.buttonFont:         -*-dejavu sans mono-bold-r-*-*-14-*-*-*-*-*-*-*
+xscreensaver.Dialog.dateFont:           -*-dejavu sans mono-medium-r-*-*-14-*-*-*-*-*-*-*
+xscreensaver.passwd.passwdFont:         -*-dejavu sans mono-bold-r-*-*-14-*-*-*-*-*-*-*
+
+!general dialog box (affects main hostname, username, password text)
+xscreensaver.Dialog.foreground:         #d6d6d6
+xscreensaver.Dialog.background:         #1a1a1a
+xscreensaver.Dialog.Button.foreground:  #d6d6d6
+xscreensaver.Dialog.Button.background:  #1a1a1a
+xscreensaver.Dialog.topShadowColor:     #1a1a1a
+xscreensaver.Dialog.bottomShadowColor:  #1a1a1a
+
+! get rid of basically everything except username and password prompt
+xscreensaver.dateFormat:
+xscreensaver.passwd.body.label:
+xscreensaver.passwd.heading.label:
+xscreensaver.passwd.login.label:
+xscreensaver.passwd.uname:              False 
+xscreensaver.passwd.unlock.label:
+
+! username/password input box and date text colour
+xscreensaver.Dialog.text.foreground:    #d6d6d6
+xscreensaver.Dialog.text.background:    #1a1a1a
+xscreensaver.Dialog.borderWidth:        1
+xscreensaver.Dialog.shadowThickness:    1
+
+!!timeout bar (background is actually determined by Dialog.text.background)
+!xscreensaver.passwd.thermometer.foreground:  #ff0000
+!xscreensaver.passwd.thermometer.background:  #000000
+!xscreensaver.passwd.thermometer.width:       8
+
+!!datestamp format--see the strftime(3) manual page for details
+!xscreensaver.dateFormat:    %I:%M%P %a %b %d, %Y
