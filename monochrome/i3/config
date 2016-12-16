@@ -168,11 +168,13 @@ bar {
     status_command i3status
 }
 
-bindsym $mod+shift+z exec i3lock
 
 # rofi stuff
 bindsym $mod+o exec rofi -show run -lines 5 -font "monospace Display 12"
 bindsym $mod+s exec rofi -show ssh -lines 5
+
+# lock computer
+bindsym $mod+shift+z exec xscreensaver-command -lock
 
 
 # setup a background I like
