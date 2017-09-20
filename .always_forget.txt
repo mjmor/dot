@@ -4,4 +4,43 @@
 #
 # Maxwell Morgan <mjmor@umich.edu>
 
+# Users and Groups
+adduser USER                            # add USER (Debian)
+adduser --disabled-password --gecos ""  # ^^^ scriptable
+adduser USER GROUP                      # add USER to GROUP (Debian)
+useradd USER                            # add USER, native binary
+useradd -m -G users,wheel -s /bin/bash USER # add new USER manually
+useradd --system                        # no homedir, no passwd, can't log in
+deluser USER                            # remove a user
+delgroup GROUP                          # remove a group
+usermod -u UID USER                     # change UID
+usermod -g GID USER                     # change default group
+groupmod -g GID group                   # change GID of group
+chsh -s /usr/local/bin/bash USER        # change default shell
+id                                      # print user and group ID #'s
+getent passwd USER                      # check if user exists
+getent group GROUP                      # check if group exists
+ulimit -a                               # per-user system limits
+groups                                  # list group membership
+users                                   # list users logged in
+who                                     # list users logged in
+finger USER                             # directory info about USER
+whoami                                  # current user
+logname                                 # current logged in user (e.g., w/ sudo)
+passwd                                  # change your password
+passwd USER                             # change USER's password
+echo "USER:NEW_PASSWORD" | chpasswd     # change USER's password, batch
+chage -E 2000-01-01 USER                # disable login with past expiration
+usermod --expiredate 1 USER             # same thing
+chage -E -1 USER                        # password never expires
+passwd --lock                           # lock an account (SSH key access OK)
 
+# Machines
+hostname                                # name of this computer
+uname                                   # operating system name
+uname -a                                # info about OS, compiler, etc.
+cat /proc/cpuinfo                       # CPU size/features
+cat /proc/meminfo                       # memory size/features
+uptime                                  # time since power on
+lspci                                   # list PCI devices
+lspci -vv                               # ^^^ with lots of info
