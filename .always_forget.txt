@@ -1,0 +1,7 @@
+# .always_forget.txt
+#
+# UNIX commands I can never remember
+#
+# Maxwell Morgan <mjmor@umich.edu>
+
+

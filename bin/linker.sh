@@ -1,6 +1,7 @@
 # link vimrc
 ln -fs ~/dot/.vimrc ~/.vimrc
 ln -fs ~/dot/.inputrc ~/.inputrc
+ln -fs ~/dot/.always_forget.txt ~/.always_forget.txt
 
 # link bashrc or bash_profile depending on OS
 SYSTYPE=`uname -s`
