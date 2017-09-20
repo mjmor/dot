@@ -201,7 +201,8 @@ set laststatus=2
 let g:airline#extensions#tabline#enabled = 1
 let g:airline#extensions#branch#enabled = 1
 let g:airline_theme = 'term'
-colorscheme crayon
+set background=dark
+colorscheme solarized
 
 " windows
 set splitbelow
