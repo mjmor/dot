@@ -8,7 +8,9 @@ case $- in
       *) return;;
 esac
 
-source /etc/lsb-release
+if [ -f /etc/lsb-release ]; then
+    . /etc/lsb-release
+fi
 
 # don't put duplicate lines or lines starting with space in the history.
 # See bash(1) for more options
@@ -86,7 +88,7 @@ fi
 # ~/.bash_aliases, instead of adding them here directly.
 # See /usr/share/doc/bash-doc/examples in the bash-doc package.
 
-if [ -f ~/.bash_aliases ]; then
+if [ -e ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
@@ -104,7 +106,6 @@ fi
 export VISUAL=vim
 export EDITOR="$VISUAL"
 export RANGER_LOAD_DEFAULT_RC=false
-export WORKON_HOME=~/venv
 
 if [ -f /usr/bin/virtualenvwrapper.sh ]; then
     source /usr/bin/virtualenvwrapper.sh
@@ -127,6 +128,6 @@ fi
 
 if [ -d ~/.class_vars/ ]; then
     for f in ~/.class_vars/*; do
-        source $f;
+        . $f;
     done
 fi

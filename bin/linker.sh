@@ -1,5 +1,6 @@
 # link vimrc
 ln -fs ~/dot/.vimrc ~/.vimrc
+ln -fs ~/dot/.inputrc ~/.inputrc
 
 # link bashrc or bash_profile depending on OS
 SYSTYPE=`uname -s`
