@@ -4,7 +4,7 @@
 "amixer -c 0 set Master 5dB+"
     m:0x0 + c:123
     XF86AudioRaiseVolume
-"amixer -c 0 set Master toggle"
+"amixer -D pulse set Master toggle"
     m:0x0 + c:121
     XF86AudioMute
 "amixer -c 0 set Capture toggle"
