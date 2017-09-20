@@ -30,7 +30,7 @@ font pango:monospace 10
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec xterm
+bindsym $mod+Return exec --no-startup-id xterm
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -91,12 +91,22 @@ bindsym $mod+a focus parent
 # focus the child container
 #bindsym $mod+d focus child
 
+# terminal
 set $ws1 "1: &#xf120;"
-set $ws2 "2: &#xf001;"
-set $ws3 "3: &#xf1d7;"
+# terminal
+set $ws2 "2: &#xf120;"
+# music
+set $ws3 "3: &#xf001;"
+# browser
 set $ws4 "4: &#xf268;"
+# libre office
 set $ws5 "5: &#xf1c2;"
+# media player
 set $ws6 "6: &#xf04b;"
+# terminal
+set $ws7 "7: &#xf120;"
+# terminal
+set $ws8 "8: &#xf120;"
 
 # switch to workspace
 bindsym $mod+1 workspace $ws1
@@ -105,6 +115,8 @@ bindsym $mod+3 workspace $ws3
 bindsym $mod+4 workspace $ws4
 bindsym $mod+5 workspace $ws5
 bindsym $mod+6 workspace $ws6
+bindsym $mod+7 workspace $ws7
+bindsym $mod+8 workspace $ws8
 
 # move focused container to workspace
 bindsym $mod+Shift+1 move container to workspace $ws1
@@ -113,28 +125,23 @@ bindsym $mod+Shift+3 move container to workspace $ws3
 bindsym $mod+Shift+4 move container to workspace $ws4
 bindsym $mod+Shift+5 move container to workspace $ws5
 bindsym $mod+Shift+6 move container to workspace $ws6
-
-# specific monitor for each workspace
-workspace $ws1 output LVDS1
-workspace $ws2 output HDMI1
-workspace $ws3 output LVDS1
-workspace $ws4 output HDMI1
-workspace $ws5 output LVDS1
-workspace $ws6 output HDMI1
+bindsym $mod+Shift+7 move container to workspace $ws7
+bindsym $mod+Shift+8 move container to workspace $ws8
 
 # specific desktops for application classes
 assign [class="Google-chrome"] $ws4
 assign [class="libreoffice-*"] $ws5
 assign [class="Vlc"] $ws6
+assign [class="Evince"] $ws5
 # special case for spotify because it doesn't set window hints
-for_window [class="Spotify"] move to workspace $ws2
+for_window [class="Spotify"] move to workspace $ws3
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exec --no-startup-id "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -144,10 +151,10 @@ mode "resize" {
         # Pressing right will grow the window’s width.
         # Pressing up will shrink the window’s height.
         # Pressing down will grow the window’s height.
-        bindsym h resize shrink width 5 px or 5 ppt
-        bindsym k resize grow height 5 px or 5 ppt
-        bindsym j resize shrink height 5 px or 5 ppt
-        bindsym l resize grow width 5 px or 5 ppt
+        bindsym h resize shrink width 10 px or 10 ppt
+        bindsym k resize grow height 10 px or 10 ppt
+        bindsym j resize shrink height 10 px or 10 ppt
+        bindsym l resize grow width 10 px or 10 ppt
 
         # same bindings, but for the arrow keys
         bindsym Left resize shrink width 5 px or 5 ppt
@@ -167,20 +174,24 @@ bindsym $mod+r mode "resize"
 bar {
     tray_output none
     position top
-    status_command i3status
+    status_command py3status -c ~/.config/i3status/config
 }
 
 
 # rofi stuff
-bindsym $mod+o exec rofi -show run -lines 5 -font "monospace Display 12"
-bindsym $mod+s exec rofi -show ssh -lines 5
+bindsym $mod+o exec --no-startup-id rofi -show run -lines 5 -font "monospace Display 12"
+bindsym $mod+s exec --no-startup-id rofi -show ssh -lines 5
 
 # lock computer
-bindsym $mod+shift+z exec xscreensaver-command -lock
-
+bindsym $mod+Shift+z exec --no-startup-id i3lock-fancy -ngf DejaVu-Sans-Mono-Bold -- scrot -z
 
 # setup a background I like
-exec feh --bg-scale '/home/flounder/background_images/foggy_pine_forest.jpg'
+exec --no-startup-id feh --bg-scale '/home/flounder/background_images/glacier_nation_park_1.jpg'
+exec --no-startup-id xset s 300 300
+exec --no-startup-id xss-lock -n /home/flounder/scripts/dim-screen.sh -- i3lock-fancy -nf DejaVu-Sans-Mono-Bold -- scrot -z
+
+# start compton
+exec --no-startup-id compton -f --inactive-opacity=0.80
 
 # i3 gaps specific stuff below #
 

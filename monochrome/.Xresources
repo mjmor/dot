@@ -24,8 +24,9 @@ XTerm*termName: xterm-256color
 XTerm*locale: true
 XTerm*metaSendsEscape: true
 
-! Use a nice truetype font and size by default... 
-XTerm*faceName: DejaVu Sans Mono Bold:size=9:antialias=true
+! Use a nice truetype font and size by default...
+XTerm*faceName: DejaVu Sans Mono Bold:size=8.5:antialias=true
+XTerm*scaleHeight: 1.1
 
 ! Every shell is a login shell by default (for inclusion of all necessary environment variables)
 XTerm*loginshell: true
@@ -71,7 +72,7 @@ xscreensaver.dateFormat:
 xscreensaver.passwd.body.label:
 xscreensaver.passwd.heading.label:
 xscreensaver.passwd.login.label:
-xscreensaver.passwd.uname:              False 
+xscreensaver.passwd.uname:              False
 xscreensaver.passwd.unlock.label:
 
 ! username/password input box and date text colour
