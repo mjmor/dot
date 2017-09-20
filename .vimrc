@@ -146,7 +146,7 @@ let g:syntastic_python_checkers = ['pyflakes', 'python', 'pylint']
 let g:pymode_python = 'python3'
 " check EVERY time I save
 let g:pymode_lint_unmodified = 1
-" Ignore warning about TODOs, and catching to broad of exception 
+" Ignore warning about TODOs, and catching to broad of exception
 " Exception warning
 let g:pymode_lint_ignore = "W0511,R0911,F0401,W0633,R0914,C0302,E124,F0002"
 " set my lint checkers
