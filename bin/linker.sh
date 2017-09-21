@@ -16,3 +16,12 @@ else
     ln -fs ~/dot/.bashrc ~/.bashrc
     source ~/.bashrc
 fi
+
+# link bash completion scripts
+ln -fs ~/dot/.bash_completion ~/.bash_completion
+
+for bcfile in ~/dot/.bash_completion.d/* ; do
+    echo $bcfile
+    echo $(basename ${bcfile})
+    ln -fs $bcfile ~/.bash_completion.d/$(basename ${bcfile})
+done
