@@ -22,8 +22,6 @@ if [ ! -d ~/.bash_completion.d/ ]; then
 fi
 
 for bcfile in ~/dot/.bash_completion.d/* ; do
-    echo $bcfile
-    echo $(basename ${bcfile})
     ln -fs $bcfile ~/.bash_completion.d/$(basename ${bcfile})
 done
 
