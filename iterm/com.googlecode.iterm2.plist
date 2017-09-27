@@ -232,6 +232,34 @@
 			<key>Text</key>
 			<string></string>
 		</dict>
+		<key>0x48-0x120000</key>
+		<dict>
+			<key>Action</key>
+			<integer>53</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0x4a-0x120000</key>
+		<dict>
+			<key>Action</key>
+			<integer>56</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0x4b-0x120000</key>
+		<dict>
+			<key>Action</key>
+			<integer>55</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
+		<key>0x4c-0x120000</key>
+		<dict>
+			<key>Action</key>
+			<integer>54</integer>
+			<key>Text</key>
+			<string></string>
+		</dict>
 		<key>0x68-0x100000</key>
 		<dict>
 			<key>Action</key>
@@ -398,9 +426,9 @@
 	<key>NSWindow Frame SUUpdateAlert</key>
 	<string>410 382 620 392 0 0 1440 900 </string>
 	<key>NSWindow Frame SharedPreferences</key>
-	<string>458 420 796 473 0 0 1440 900 </string>
+	<string>634 1497 796 473 -621 900 2560 1080 </string>
 	<key>NSWindow Frame iTerm Window 0</key>
-	<string>529 404 570 452 0 0 1440 900 </string>
+	<string>64 116 1361 762 0 0 1440 900 </string>
 	<key>NSWindow Frame iTerm Window 1</key>
 	<string>717 245 570 452 0 0 1440 900 </string>
 	<key>NeverWarnAboutShortLivedSessions_C0D4EC15-45FA-44B1-A14B-CDD8440765ED</key>
