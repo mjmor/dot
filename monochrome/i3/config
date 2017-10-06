@@ -133,6 +133,7 @@ assign [class="Google-chrome"] $ws4
 assign [class="libreoffice-*"] $ws5
 assign [class="Vlc"] $ws6
 assign [class="Evince"] $ws5
+assign [class="MATLAB R2017b - academic use"] $ws7
 # special case for spotify because it doesn't set window hints
 for_window [class="Spotify"] move to workspace $ws3
 

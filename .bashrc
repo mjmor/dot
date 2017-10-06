@@ -131,6 +131,11 @@ if [ -d ~/scripts ]; then
     export PATH=$PATH:~/scripts/
 fi
 
+# if matlab is installed, then add to path
+if [ -f ~/matlab/bin/matlab ]; then
+    export PATH=$PATH:~/matlab/bin/
+fi
+
 if [ -d ~/.class_vars/ ]; then
     for f in ~/.class_vars/*; do
         . $f;
