@@ -187,7 +187,7 @@ bindsym $mod+s exec --no-startup-id rofi -show ssh -lines 5
 bindsym $mod+Shift+z exec --no-startup-id i3lock-fancy -ngf DejaVu-Sans-Mono-Bold -- scrot -z
 
 # setup a background I like
-exec --no-startup-id feh --bg-scale '/home/flounder/background_images/glacier_nation_park_1.jpg'
+exec --no-startup-id feh --bg-scale '/home/flounder/pictures/backgrounds/glacier_nation_park_1.jpg'
 exec --no-startup-id xset s 300 300
 exec --no-startup-id xss-lock -n /home/flounder/scripts/dim-screen.sh -- i3lock-fancy -nf DejaVu-Sans-Mono-Bold -- scrot -z
 
