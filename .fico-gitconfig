@@ -5,3 +5,6 @@
 	default = simple
 [core]
 	excludesfile = ~/.gitignore
+[alias]
+	unstage = reset HEAD --
+	logv = log --graph
