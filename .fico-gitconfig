@@ -1,0 +1,7 @@
+[user]
+	email = mjmor@quadmetrics.com
+	name = Maxwell Morgan
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore

@@ -1,0 +1,7 @@
+[user]
+	email = mjmor@umich.edu
+	name = Maxwell Morgan
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore
