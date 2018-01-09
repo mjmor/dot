@@ -21,6 +21,20 @@ youtube() {
     open "https://www.youtube.com/results?search_query=$search"
 }
 
+backup() {
+    echo "Performing backup to $1..."
+    echo "Are you sure you'd like to continue? y/n"
+    read yn
+    while [ "$yn" != "y" ] && [ "$yn" != "n" ]; do
+        echo "$yn is not a valid response. Please enter y/n"
+        read yn
+    done
+    if [ "$yn" == "n" ]; then
+        return 1
+    fi
+    rsync -aAX --info=progress2 --exclude={"/dev/*","/proc/*","/sys/*","/tmp/*","/run/*","/mnt/*","/media/*","/lost+found","/home/flounder/.cache/*"} / "$1"
+}
+
 # some more ls aliases
 alias ll='ls -alF'
 alias la='ls -A'
