@@ -141,3 +141,11 @@ if [ -d ~/.class_vars/ ]; then
         . $f;
     done
 fi
+
+if [ -d /opt/android-sdk/ ]; then
+    export ANDROID_HOME=/opt/android-sdk
+    export PATH=$PATH:$ANDROID_HOME/tools
+    export PATH=$PATH:$ANDROID_HOME/platform-tools
+fi
+
+export JAVA_HOME='/usr/lib/jvm/java-8-openjdk/jre/'

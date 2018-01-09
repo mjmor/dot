@@ -33,3 +33,8 @@ if [[ $SYSTYPE =~ ^Darwin ]]; then
 else
     source ~/.bashrc
 fi
+
+# link all system configuration files
+if [ -d /etc/X11/xorg.conf.d/ ]; then
+    sudo ln -fs ~/dot/sys_config/40-libinput.conf /etc/X11/xorg.conf.d/40-libinput.conf
+fi

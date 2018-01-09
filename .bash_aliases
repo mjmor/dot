@@ -1,6 +1,6 @@
 # mimic osx open
 open () {
-    $(which mimeopen) $1 >/dev/null 2>&1 &
+    $(which xdg-open) $1 >/dev/null 2>&1 &
 }
 
 google() {
@@ -69,5 +69,6 @@ alias vi="/usr/bin/vim"
 alias 482="cd /home/flounder/Documents/EECS482"
 alias 485="cd /home/flounder/Documents/EECS485/IA"
 alias 498="cd /home/flounder/Documents/EECS498"
+alias 441="cd /home/flounder/Documents/EECS441"
 
 alias vpn_status="sudo systemctl status openvpn-client@air-*"
