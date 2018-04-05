@@ -65,7 +65,7 @@ fi
 
 source ~/scripts/git_prompt_utils.sh
 if [ "$color_prompt" = yes ]; then
-    PS1='\[${GREY}${BOLD}\]\u@\h \[${RESET}\]| \[${GREY}${BOLD}\]\D{%m.%e %I:%M %Z} \[${RESET}\]| \[${GREY}${BOLD}\]\w\n\[${RESET}\]|__\[${ORANGE}${BOLD}\]($(parse_git_branch)$(render_git_stash))\[${RESET}\]--> '
+    PS1='\[${GREY}${BOLD}\]\u@\h \[${RESET}\]| \[${GREY}${BOLD}\]\D{%m.%d %I:%M %Z} \[${RESET}\]| \[${GREY}${BOLD}\]\w\n\[${RESET}\]|_> '
 else
     PS1='\u@\h:\w\$ '
 fi
