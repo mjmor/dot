@@ -120,6 +120,7 @@ if [ `which javac` ]; then
     export CLASSPATH=~/.java_class/:.
 fi
 
+export PATH=$PATH:/usr/local/bin
 # specific if go lang is installed
 if [ `which go` ]; then
     export GOPATH=~/go/
