@@ -67,22 +67,9 @@ alias copy='xclip -selection clipboard'
 # git
 alias st='git status'
 
-# programs
-alias chrome='google-chrome-stable >/dev/null 2>&1 &'
-alias chromito='google-chrome-stable --incognito >/dev/null 2>&1 &'
-alias scan_wifi='sudo iw dev wlp3s0 scan | grep "SSID"'
-
 # Add an "alert" alias for long running commands.  Use like so:
 #   sleep 10; alert
 alias alert='notify-send --urgency=low -i "$([ $? = 0 ] && echo terminal || echo error)" "$(history|tail -n1|sed -e '\''s/^\s*[0-9]\+\s*//;s/[;&|]\s*alert$//'\'')"'
 
 # vi to vim
 alias vi="/usr/bin/vim"
-
-# alias to common eecs directories
-alias 482="cd /home/flounder/Documents/EECS482"
-alias 485="cd /home/flounder/Documents/EECS485/IA"
-alias 498="cd /home/flounder/Documents/EECS498"
-alias 441="cd /home/flounder/Documents/EECS441"
-
-alias vpn_status="sudo systemctl status openvpn-client@air-*"
