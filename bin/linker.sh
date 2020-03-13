@@ -9,7 +9,6 @@ if [[ $SYSTYPE =~ ^Darwin ]]; then
     ln -fs ~/dot/.bash_aliases ~/.bash_aliases
     ln -fs ~/dot/.bashrc ~/.bashrc
     ln -fs ~/dot/.bash_profile ~/.bash_profile
-    ln -fs ~/dot/.fico-gitconfig ~/.gitconfig
     ln -fs ~/dot/.skhdrc ~/.skhdrc
     ln -fs ~/dot/.chunkwmrc ~/.chunkwmrc
 else
