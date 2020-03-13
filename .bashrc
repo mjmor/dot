@@ -63,7 +63,6 @@ fi
 # old color prompt
 # \[\e]0;\u@\h: \w\a\]\[\033[01;32m\]\u@\h\[\033[00m\]:\[\033[01;34m\]\w\[\033[00m\]\$
 
-source ~/scripts/git_prompt_utils.sh
 if [ "$color_prompt" = yes ]; then
     PS1='\[${GREY}${BOLD}\]\u@\h \[${RESET}\]| \[${GREY}${BOLD}\]\D{%m.%d %I:%M %Z} \[${RESET}\]| \[${GREY}${BOLD}\]\w\n\[${RESET}\]|_> '
 else
@@ -135,6 +134,10 @@ fi
 # if matlab is installed, then add to path
 if [ -f ~/matlab/bin/matlab ]; then
     export PATH=$PATH:~/matlab/bin/
+fi
+
+if [ -d /opt/facebook/nuclide/latest/nuclide/pkg/fb-on-demand-cli/bin ]; then
+    export PATH=$PATH:/opt/facebook/nuclide/latest/nuclide/pkg/fb-on-demand-cli/bin/
 fi
 
 if [ -d ~/.class_vars/ ]; then
